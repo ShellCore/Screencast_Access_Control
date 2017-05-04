@@ -38,4 +38,8 @@ public class BankAccount {
         }
         return false;
     }
+
+    public double getBalance() {
+        return balance;
+    }
 }

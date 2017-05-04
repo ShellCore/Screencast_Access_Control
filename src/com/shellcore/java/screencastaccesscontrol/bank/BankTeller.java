@@ -32,4 +32,18 @@ public class BankTeller {
             System.out.println("¡Error en el retiro!");
         }
     }
+
+    public void transfer(BankAccount origin, BankAccount destiny, double amount) {
+        if(amount > 0 && (origin.getBalance() / 2) >= amount) {
+            boolean resultWithdraw = origin.withdraw(amount);
+            boolean resultDeposit = destiny.deposit(amount);
+            if (resultWithdraw && resultDeposit) {
+                System.out.println("Transferencia exitosa: $" + amount);
+            } else {
+                System.out.println("¡Error en la transferencia!");
+            }
+        } else {
+            System.out.println("No es posible realizar la transferencia.");
+        }
+    }
 }

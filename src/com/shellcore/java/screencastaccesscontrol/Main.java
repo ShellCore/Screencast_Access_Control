@@ -21,5 +21,12 @@ public class Main {
 
         ATM atm = new ATM(105);
         atm.withdraw(bankAccount1, 100.00);
+
+        System.out.println("Cuenta 1: $" + bankAccount.getBalance());
+        System.out.println("Cuenta 2: $" + bankAccount1.getBalance());
+
+        bankTeller.transfer(bankAccount, bankAccount1, 100.00);
+        System.out.println("Cuenta 1: $" + bankAccount.getBalance());
+        System.out.println("Cuenta 2: $" + bankAccount1.getBalance());
     }
 }
